@@ -18,7 +18,6 @@
 
 </head>
 <body class="hold-transition sidebar-mini dark">
-
     <!-- wrapper -->
     <div  id="app">
         @yield('content')

@@ -12,10 +12,13 @@
           <!-- Sidebar user panel (optional) -->
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
               <div class="image">
-                  <img src="/images/AdminLTELogo.png" class="img-circle elevation-2" alt="User Image">
+                  <!-- <img src="/images/AdminLTELogo.png" class="img-circle elevation-2" alt="User Image"> -->
+                  <img v-bind:src=" $baseUrl + '/uploads/users/' + $auth.user().profile_pict " class="img-circle elevation-2" alt="User Image">
               </div>
               <div class="info">
-                  <a class="d-block" href="#">{{ $auth.user().name }}</a>
+                    <router-link class="d-block"  tag="a" :to="{ name : 'account' }" >
+                        {{ $auth.user().name }}
+                    </router-link>
               </div>
           </div>
 
@@ -26,7 +29,7 @@
                       with font-awesome or any other icon font library -->
 
                   <li class="nav-item">
-                      <router-link tag="a" to="/dashboard" class="nav-link">
+                      <router-link tag="a" :to="{ name : 'admin.dashboard' }"  class="nav-link">
                           <i class="nav-icon fas fa-tachometer-alt"></i>
                           <p>Dashboard</p>
                       </router-link>

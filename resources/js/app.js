@@ -19,8 +19,19 @@ import axios from 'axios';
 import VueAuth from '@websanova/vue-auth';
 import auth from './auth';
 
+// bootstrap-vue
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import VuejsClipper from 'vuejs-clipper'
+
 // Set Vue globally
 window.Vue = Vue
+
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
+
+Vue.use(VuejsClipper)
 
 // Set Vue router
 Vue.router = router
@@ -31,6 +42,8 @@ Vue.use(VueAxios, axios)
 axios.defaults.baseURL = `${process.env.MIX_APP_URL}/api/v1`
 Vue.use(VueAuth, auth)
 Vue.prototype.$appName = 'My App'
+
+Vue.prototype.$baseUrl = process.env.MIX_APP_URL;
 
 // Load Index
 Vue.component('index', Index)

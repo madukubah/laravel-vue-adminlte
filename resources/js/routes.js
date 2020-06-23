@@ -33,6 +33,16 @@ let routes = [
         },
         children: [
             {
+                path: 'dashboard',
+                name: 'admin.dashboard',
+                component: require('./views/dashboard').default
+            },
+            {
+                path: 'account',
+                name: 'account',
+                component: require('./views/account').default
+            },
+            {
                 path: 'users',
                 name: 'admin.users',
                 component: require('./views/users').default

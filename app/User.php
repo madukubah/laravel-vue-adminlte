@@ -10,6 +10,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
+    public const PHOTO_PATH = "uploads/users";
 
     /**
      * The attributes that are mass assignable.
@@ -17,9 +18,13 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 
+        'email', 
+        'password',
+        'phone',
+        'address',
     ];
-
+    
     /**
      * The attributes that should be hidden for arrays.
      *

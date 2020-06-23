@@ -28,7 +28,12 @@
         "@fortawesome/fontawesome-free": "^5.11.2",
         "@websanova/vue-auth": "^3.0.5-beta",
         "admin-lte": "^3.0",
+        "b64-to-blob": "^1.2.19",
+        "bootstrap-vue": "^2.11.0",
         "es6-promise": "^4.2.8",
-        "vue-axios": "^2.1.5"
+        "svg-to-pdfkit": "^0.1.8",
+        "vue-axios": "^2.1.5",
+        "vue-toast-notification": "^0.2.0",
+        "vuejs-clipper": "^1.1.7"
     }
 }
